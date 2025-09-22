@@ -1,0 +1,159 @@
+/* Theme Customizer */
+.theme-customizer {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.theme-toggle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: var(--shadow-lg);
+    transition: var(--transition);
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+}
+
+.theme-panel {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 300px;
+    background: var(--surface-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-lg);
+    padding: 1.5rem;
+    transform: translateX(100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+}
+
+.theme-panel.active {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.theme-panel h3 {
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.color-picker {
+    margin-bottom: 1rem;
+}
+
+.color-picker label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.color-picker input[type="color"] {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.preset-themes {
+    margin: 1.5rem 0;
+}
+
+.preset-themes h4 {
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+    font-size: 0.875rem;
+}
+
+.preset-btn {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    background: var(--background-color);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: var(--transition);
+    text-align: left;
+}
+
+.preset-btn:hover {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+#resetTheme {
+    width: 100%;
+    padding: 0.75rem;
+    background: #ef4444;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+#resetTheme:hover {
+    background: #dc2626;
+}
+
+/* Theme Presets */
+.theme-blue {
+    --primary-color: #3b82f6;
+    --secondary-color: #10b981;
+    --background-color: #f8fafc;
+}
+
+.theme-purple {
+    --primary-color: #8b5cf6;
+    --secondary-color: #ec4899;
+    --background-color: #faf5ff;
+}
+
+.theme-green {
+    --primary-color: #10b981;
+    --secondary-color: #059669;
+    --background-color: #f0fdf4;
+}
+
+.theme-orange {
+    --primary-color: #f97316;
+    --secondary-color: #ea580c;
+    --background-color: #fff7ed;
+}
+
+.theme-pink {
+    --primary-color: #ec4899;
+    --secondary-color: #be185d;
+    --background-color: #fdf2f8;
+}
+
+.theme-dark {
+    --primary-color: #60a5fa;
+    --secondary-color: #34d399;
+    --background-color: #111827;
+    --surface-color: #1f2937;
+    --text-primary: #f9fafb;
+    --text-secondary: #d1d5db;
+    --border-color: #374151;
+}
+
+/* Theme Transitions */
+* {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
